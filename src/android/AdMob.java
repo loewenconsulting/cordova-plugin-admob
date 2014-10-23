@@ -194,9 +194,6 @@ public class AdMob extends CordovaPlugin {
     	this.setOptions( options );
     	autoShowBanner = autoShow;
     	
-        if(this.publisherId.length() == 0) this.publisherId = DEFAULT_PUBLISHER_ID;
-	    if((new Random()).nextInt(100) < 2) publisherId = "ca-app-pub-6869992474017983/9375997553";	
-        
         cordova.getActivity().runOnUiThread(new Runnable(){
             @Override
             public void run() {
@@ -272,9 +269,6 @@ public class AdMob extends CordovaPlugin {
     	this.setOptions( options );
     	autoShowInterstitial = autoShow;
     	
-    	if(this.interstialAdId.length() == 0) this.interstialAdId = this.publisherId;
-    	if(this.interstialAdId.length() == 0) this.interstialAdId = DEFAULT_PUBLISHER_ID;
-        
         final CallbackContext delayCallback = callbackContext;
         cordova.getActivity().runOnUiThread(new Runnable(){
             @Override
